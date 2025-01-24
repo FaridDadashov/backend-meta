@@ -1,0 +1,136 @@
+
+.about-test {
+    width: 100%;
+    background-color: #203E7C;
+
+    h1 {
+        color: white;
+        align-items: center;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+
+#coorporationid{
+    display: flex;
+    margin-top: 80px;
+    height: 80vh;
+    
+    .leftbar{
+        li {
+            width: 480px;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 12px 16px;
+                margin-top: 10px;
+                font-weight: 500;
+                font-size: 16px;
+                width: 334px;
+                color: black;
+                transition: color 0.2s ease-in;
+                position: relative;
+        
+                &:hover {
+                    background-color: #C6D7FA;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        height: 100%;
+                        background-color: #203E7C;
+                        left: 0;
+                        top: 0;
+
+                    }
+                }
+            }
+        }
+    }
+.rightbar{
+    margin-left: 100px;
+        position: relative;
+        margin-top: 10px;
+        h5{
+            font-size: 20px;
+            font-weight: 500;
+            position: absolute;
+            left: -160px;
+            top: -10px;
+
+        }  
+        img{
+            position: absolute;
+            left: -160px;
+            margin-top: 20px;
+            
+        }
+     
+    
+    
+    }
+}
+@media (max-width: 768px) {
+    #coorporationid {
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftbar {
+        width: 100%;
+        li {
+            width: 100%;
+            text-align: center;
+            
+            a {
+                width: 90%;
+                padding: 10px 14px;
+                font-size: 14px;
+                
+                &:hover {
+                    background-color: #C6D7FA;
+
+                    &::after {
+                        width: 100%;
+                        height: 4px;
+                        background-color: #203E7C;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .rightbar {
+        
+        width: 90%;
+        left: 20px;
+
+        h5 {
+            font-size: 18px;
+            position: static;
+            margin-bottom: 10px;
+            margin-left: 27%
+
+        }
+
+        img {
+            position: static;
+            max-width: 100%;
+            height: auto;
+            margin-left: 27%;
+        }
+    }
+}
+

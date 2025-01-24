@@ -1,0 +1,51 @@
+
+
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block main %}
+  
+  
+    <section id="services">
+      <div class="leftbar container">
+         <ul style="list-style: none;">
+          
+          {% for service in services  %}
+            
+          <li>
+            <a href="#" style="background-color: #C6D7FA;">{{service.title }} {{ services.id }}</a>
+          </li>
+          {% endfor %}
+            
+         
+         </ul>
+      </div>
+      <div class="rightbar">
+
+        
+        {% for service in  services %}
+          
+        <h5 class="">{{service.title}}</h5>
+        <img src="{{service.image.url}}" alt="">
+        <h4>{{service.description}}</h4>
+        <h1>Praktiki Tədris proqramı:</h1>
+        <ol>
+          
+          {% for service in services %}
+            
+          <li> {{service.plan}}</li>
+          {% endfor %}
+            
+       
+        </ol>
+        <h3>{{service.about}}
+         </h3>
+        {% endfor %}
+          
+      </div>
+  </section>
+
+{% endblock main %}
+
+  
+ 

@@ -1,0 +1,27 @@
+#box{
+    width: 50%;
+    margin: auto;
+    label{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    div{
+        textarea{
+            width: 100%;
+            height: 20vh;
+            border: 1px solid #CED4DA;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+}
+@media(max-width:576px){
+    #box{
+        width: 100%;
+        div{
+            textarea{
+                height: 15vh;
+            }
+        }
+    }
+}

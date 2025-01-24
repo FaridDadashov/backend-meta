@@ -1,0 +1,70 @@
+
+.about-test {
+    width: 100%;
+    background-color: #203E7C;
+
+    h1 {
+        color: white;
+        align-items: center;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+
+#aboutUs{
+    height: 100vh;
+    .rightbar{
+        width: 40%;
+        margin-top: 40px;
+    }
+    p{
+        font-size: 28px;
+        font-weight: 500;
+    }
+    h1{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 768px) {
+    #aboutUs {
+        flex-direction: column-reverse;
+
+        img{
+            margin-left: 0;
+            width: 100%;
+        }
+        height: auto; /* Yükseklik içeriğe göre ayarlanır */
+        padding: 20px; /* Kenarlardan boşluk ekler */
+        .rightbar {
+            width: 100%; /* Sağdaki içerik tam genişlikte olacak */
+            margin-top: 20px;
+        }
+        p {
+            font-size: 18px; /* Yazı boyutları küçültüldü */
+            font-weight: 500;
+        }
+        h1 {
+            font-size: 20px; /* Başlık yazı boyutu küçültüldü */
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 14px; /* İkinci başlık yazı boyutu küçültüldü */
+            font-weight: 500;
+            margin-top: 20px;
+        }
+    }
+}

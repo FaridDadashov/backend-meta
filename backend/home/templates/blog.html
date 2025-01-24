@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block main %}
+    
+    
+
+
+    <div class="about-test" style="padding: 40px;">
+
+      <h1 style="position: relative; top:20%;">Bloq  </h1>
+      <p style="position: relative; top:20%;">  Xidmətlər > Maliyyə və mühasibatlıq</p>
+
+  </div>
+  <section id="blog" class="container">
+      
+      {% for blog in blogs %}
+        
+      <div class="boxes">
+          <div class="box">
+              <a href="{% url 'home:blog_detail' pk=blog.pk %}"><img src="{{blog.image.url}}" alt="">
+              <h3>{{blog.title}}</h3>
+          </div></a>
+      {% endfor %}
+        
+     
+         
+
+      </div>
+  </section>
+  {% endblock main %}
+
+
+    

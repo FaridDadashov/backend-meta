@@ -1,0 +1,193 @@
+.values {
+    width: 100%;
+    height: 20vh;
+    background-color: #203E7C;
+
+    h1 {
+        color: white;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;position: relative;
+        top: 10%;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .values {
+        height: auto; /* Daha küçük ekranlarda dinamik yükseklik */
+    }
+
+    .values h1 {
+        font-size: 30px; /* Daha küçük başlık boyutu */
+    }
+
+    .values p {
+        font-size: 16px; /* Daha küçük metin boyutu */
+    }
+}
+
+@media (max-width: 480px) {
+    #valuesUs{
+        width: 100%;
+        display: flex;
+       
+        flex-direction: column;
+        text-align: center;
+
+    }
+    #footer{
+        margin-top: 0;
+    }
+    .values {
+        padding: 10px; /* Küçük cihazlarda iç boşluk ekleme */
+    }
+
+    .values h1 {
+        font-size: 24px; /* Daha küçük başlık boyutu */
+    }
+
+    .values p {
+        font-size: 14px; /* Daha küçük metin boyutu */
+    }
+}
+#ourValues{margin-top: 60px;
+    height: 90vh;
+    .leftbox{
+        width: 50%;
+        .first{
+            .boxOne{
+                p{
+                margin-top: 180px; 
+                font-weight: 500;  
+                margin-left: 20px;                   
+                }
+            }
+            .boxTwo{
+                background-color: black;
+                padding: 30px 20px;
+                color: white;
+                border-radius: 10px;
+                height: 260px;
+                p{
+                    font-size: 40px;
+                }
+                h1{
+                    font-size: 20px;
+                    
+                }
+            }
+        }
+        .second{
+            width: 100%;
+            background-color: #203E7C;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 7px;
+            p{
+                font-size: 50px ;
+                color: white;
+                font-weight: 500 ;
+            }
+        }
+        .third{
+            width: 50%;
+                margin-left: 50%;
+                margin-top: 20px;
+            p{
+                padding: 30px;
+                background-color: #278C63;
+                color: white;
+                font-size: 40px;
+                font-weight: 600;
+                border-radius: 7px;
+                text-align: center;
+            }
+            h1{
+                font-size: 20px;
+            }
+        }
+    }
+    .rightbox{
+        width: 50%;
+        height: 100%;
+        margin-left: 20px;
+        .first{
+            .box{
+                width: 200px;
+                padding: 15px;
+                background-color: #FAC811;
+                margin-top: 30px;
+            }
+        }
+        .second{
+                margin-top: 20px;
+                
+            .left{
+                width: 50%;
+                p{
+                    padding: 20px;
+                    background-color: #55A0E5;
+                    color: white;
+                    font-size: 40px;
+                    text-align: center;
+                    border-radius: 7px;
+                }
+            }
+            .right{
+                align-items: center;
+                width: 50%;
+                h1{
+                    font-size: 17px;
+                    align-items: center;
+                    font-weight: 400;
+                    margin-top: 10px;
+                    margin-left: 5px;
+                    
+                }
+            }
+           
+        }
+        .third{
+            padding: 12px 60px  12px 60px;
+            background-color: #278C63;
+            width: 70%;
+            color: white;
+            font-size: 40px;
+            border-radius: 4px;
+        }
+        .fourth{
+           .left{
+            background-color: #FAC811;
+            width: 50%;
+            height: 303px;
+            margin-top: 12px;
+        
+            p{
+                width: 220px;
+                font-size: 28px;
+                text-align: center;
+                font-weight: 700;
+                position: relative;
+                top: 30%;
+            
+            }
+            h2{
+                font-weight: 400;
+                font-size: 16px;
+                position: relative;
+                top: 40%;
+                left: 10px;
+            }
+        }
+    }
+        
+    }
+}

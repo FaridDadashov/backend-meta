@@ -1,0 +1,119 @@
+#detail {
+    height: 80vh;
+    overflow: hidden;
+    .right{
+        h1{
+            font-size: 22px;
+            font-weight: 600;
+        }
+        h2{
+            font-size: 17px;
+            font-weight: 450;
+            margin-top: 50px;
+        }
+    }
+}
+
+.boxes {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Kutular arasında boşluk */
+    justify-content: center;
+    padding: 20px;
+
+    .box {
+        width: 100%; /* Kutuların genişliği container'a uyacak */
+        max-width: 295px; /* Maksimum genişlik */
+        height: auto; /* Dinamik yükseklik */
+        margin: 0 auto; /* Ortalamak için */
+        border: 1px solid #ABA4A4;
+        padding: 15px;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+        background-color: #fff;
+
+        img {
+            width: 100%; /* Görseller container'a uyacak */
+            height: auto; /* Oranı koruyacak şekilde */
+            margin: 0;
+            border-radius: 1rem;
+            object-fit: cover; /* Görselin düzgün oturmasını sağla */
+        }
+
+        a {
+            display: block; /* Tüm genişliği kapsar */
+            padding: 0;
+            border-radius: 0;
+            background-color: white;
+            color: black;
+            width: 100%;
+            text-align: left;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+
+        h3 {
+            color: #203E7C;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #detail {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 40px;
+        padding: 0 10px; /* Add padding for mobile */
+        
+        .left{
+            position: relative;
+            right: 100px;
+            margin-top: 50px;
+        }
+
+        .right {
+            h1 {
+                font-size: 18px; /* Adjust font size */
+                font-weight: 600;
+            }
+            h2 {
+                font-size: 15px; /* Adjust font size */
+                font-weight: 450;
+                margin-top: 20px; /* Less margin */
+            }
+        }
+
+        .boxes {
+            grid-template-columns: 1fr; /* Single column for mobile */
+            gap: 15px; /* Reduced gap for mobile */
+            padding: 10px;
+        }
+
+        .box {
+            width: 100%; /* Full width for box */
+            max-width: 100%; /* Ensure the box fills the screen */
+            margin: 0 auto;
+        }
+
+        img {
+            width: 200px; /* Ensure the image is responsive */
+            height: 200px; /* Maintain aspect ratio */
+            border-radius: 1rem;
+            object-fit: cover;
+            margin-left:75px;
+        }
+
+        a {
+            font-size: 16px; /* Adjust font size for mobile */
+        }
+
+        h3 {
+            font-size: 16px; /* Adjust font size for h3 */
+        }
+    }
+}

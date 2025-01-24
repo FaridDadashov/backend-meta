@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block main %}
+    
+    
+
+    <div class="about-test" style="padding: 40px;">
+
+        <h1>İdarə heyəti  </h1>
+        <p> Komandamız > İdarə heyəti</p>
+    </div>
+<section id="ourTeam" class="container">
+      
+        <div class="boxes">
+            
+            {% for team in teams %}
+                
+            <div class="box">
+                <img src="{{team.image.url}}" alt="">
+                <a href="{% url 'home:team_id' pk=team.pk %}">{{team.name}}</a>
+                <h3>{{team.description}}</h3>
+            </div>
+            {% endfor %}
+                
+
+            
+        </div>
+    </section>
+
+{% endblock main %}
+    
+    

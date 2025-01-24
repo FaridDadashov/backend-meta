@@ -1,0 +1,116 @@
+#services{
+    display: flex;
+    height: auto;
+    margin-bottom: 100px;
+    background-color: #F1F1F1;
+    
+    .leftbar{
+        background-color: white;
+        width: 40%;
+        margin-left: 40px;
+        border-radius:16px;
+        height: 800px;
+        margin-top: 30px;
+        li{
+            a{
+            display: inline-block;
+            padding: 12px 16px;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            position: relative;
+            width: 334px;
+            transition: 0.2s ease-in;
+
+                &:hover{
+                    background-color:#C6D7FA ;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 4px;
+                        background-color:#203E7C;
+                        left: 0;
+                        top:0;
+                        transition: 0.2s ease-in;
+
+                    }
+                }
+        }
+        
+           
+    }
+    }
+    .rightbar{
+        width: 140%;  
+        margin-top: 30px;
+        margin-left: 100px;
+        ol{
+            li{
+                margin-left:-15px;
+            }
+        }
+       
+        h5{
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 20px;
+        }  
+        img{
+            margin-top: 20px ;
+        }
+        h4{
+            font-size: 16px;
+            font-weight: 400;
+            width: 735px;
+            margin-top: 20px;
+        }
+        h1{
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+       
+        h3{
+            font-size: 16px;
+            color: #203E7C;
+            font-weight: 400;
+            width: 735px;
+            margin-top: 20px;
+        }
+
+
+    }
+}
+
+@media (max-width: 768px) {
+    #services {
+        flex-direction: column;
+        // overflow: hidden;
+        height: auto;
+          
+        .leftbar{
+            width: 80%;
+        }
+        .rightbar{
+            width: 100%;
+            margin-left: 0;
+            img{
+                margin: 0;
+                width: 95%;
+            }
+            h4{
+                width:590px;
+                font-size: 16px;
+            }
+            h3{
+                width: 588px;
+            }
+            
+        }
+        
+       
+}
+}

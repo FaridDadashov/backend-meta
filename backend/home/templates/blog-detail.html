@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block main %}
+    
+    
+
+    <div class="about-test" style="padding:40px;">
+
+      <h1 style="position: relative; top:20%;">Bloq  </h1>
+      <p style="position: relative; top:20%;">   Xidmətlər > Maliyyə və mühasibatlıq > Fusce tincidunt commodo sapien, quis prttitor.</p>
+
+  </div>
+<section id="detail" class="container d-flex" style="margin-top: 70px; align-items: center;">
+  <img class="left" src="{{blog.image.url}}" alt="" style="width: 512px; height: 400px; object-fit: contain;">
+  <div class="right" style="margin-left: 30px;">
+      <h1>{{blog.title}}</h1>
+      <h2> {{blog.description}}</h2>
+  </div>
+
+</section>
+<h1 class="container">Oxşar bloqlar</h1>
+
+<div class="boxes container ">
+  {% for blog in blogs %}
+    
+    <div class="box">
+        <img src="{{blog.image.url}}" alt="">
+        <a href="{% url 'home:blog_detail' pk=blog.pk %}">{{blog.title}}</a>
+    </div>
+  {% endfor %}
+    
+  
+
+
+</div>
+
+{% endblock main %}

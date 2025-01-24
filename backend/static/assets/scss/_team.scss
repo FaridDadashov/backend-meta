@@ -1,0 +1,166 @@
+#ourTeam {
+    height: auto; /* Mobil cihazlarda otomatik yükseklik */
+    padding: 20px; /* Genel boşluk ekleme */
+
+    p {
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 220px;
+        color: #FAC811;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background-color: #858585;
+            top: 50%;
+            left: 120px;
+            
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center; /* Başlığı ortala */
+        margin-bottom: 20px;
+    }
+
+    a {
+        display: inline-block;
+        margin-left: 15px;
+        width: 150px;
+        background-color: #203E7C;
+        padding: 10px; /* Buton içeriğine daha fazla boşluk */
+        color: white;
+        text-decoration: none;
+        font-size: 18px; /* Boyutu mobil uyumlu hale getir */
+        border-radius: 2rem;
+        text-align: center;
+
+        &:hover {
+            background-color: #1a3262; /* Hover efekti */
+        }
+    }
+
+    .boxes {
+        display: grid; /* Kutuları düzenlemek için grid */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+        gap: 20px; /* Kutular arasında boşluk */
+        justify-content: center;
+        padding: 20px;
+
+        .box {
+            width: 100%; /* Kutuların genişliği container'a uyacak */
+            max-width: 295px; /* Maksimum genişlik */
+            height: auto; /* Dinamik yükseklik */
+            margin: 0 auto; /* Ortalamak için */
+            border: 1px solid #ABA4A4;
+            padding: 15px;
+            border-radius: 1rem;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+            background-color: #fff;
+
+            img {
+                width: 100%; /* Görseller container'a uyacak */
+                height: auto; /* Oranı koruyacak şekilde */
+                margin: 0;
+                border-radius: 1rem;
+                object-fit: cover; /* Görselin düzgün oturmasını sağla */
+            }
+
+            a {
+                display: block; /* Tüm genişliği kapsar */
+                padding: 0;
+                border-radius: 0;
+                background-color: white;
+                color: black;
+                width: 100%;
+                text-align: left;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 10px 0 5px 0;
+            }
+
+            h3 {
+                color: #203E7C;
+                font-size: 18px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    /* Tablet tasarımı */
+    @media (max-width: 768px) {
+        p {
+            font-size: 18px;
+            margin-left: 20px;
+
+            &::after {
+                left: -20px;
+                width: 100px;
+            }
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        a {
+            font-size: 16px;
+            width: 130px;
+        }
+    }
+
+    /* Telefon tasarımı */
+    @media (max-width: 480px) {
+        p {
+            font-size: 16px;
+            margin-left: 10px;
+
+            &::after {
+                left: -10px;
+                width: 80px;
+            }
+        }
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: 14px;
+            width: 120px;
+            padding: 8px;
+        }
+
+        .boxes {
+            grid-template-columns: repeat(1, 1fr); /* Tek sütun */
+            gap: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 100%; /* Tam genişlik */
+            max-width: none; /* Kısıtlamayı kaldır */
+            padding: 10px;
+
+            img {
+                height: 200px; /* Görsel yüksekliği */
+                object-fit: cover;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}

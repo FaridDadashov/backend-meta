@@ -1,0 +1,102 @@
+#vacancy{
+    .filter{
+        padding: 8px 26px;
+        margin-right: 10px;
+        border-radius: 8px;
+       
+    
+    }
+   form{
+    img{
+        position: relative;
+        left: 30px;
+    }
+   }
+
+
+    margin-top: 80px;
+    .search{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 14px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        transition: box-shadow 0k.25s;
+    }
+    .sear:focus-within{
+        box-shadow:0 0 2px 0 black;
+    }
+
+    .search-input{
+        font-size: 16px;
+        color: grey;
+        margin-left: 14px;
+        background: transparent;
+        border: none;
+        width: 100% ;
+    }
+    .search-input:focus {
+        outline: none; 
+        border: none; 
+    }
+    .search-icon{
+        color: grey;
+    }
+    .axtar-input{
+        background-color: #203E7C;
+        padding: 8px 32px;
+        color: white;
+        border-radius: 9px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .box{
+        width: 100%;
+        padding: 20px;
+        margin-top: 50px;
+        border-radius: 15px;
+        border:1px solid grey;
+        align-items: center;
+        a{
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .topbox{
+            align-items: center;
+            h1{
+                font-size: 24px;
+                grid-row-end: 700;
+                color: black;
+            }
+            img{
+                width: 78px;
+                margin-left: 10px;
+                height: 25px;
+                margin-bottom: 10px;
+            }
+        }
+        .bottombox{
+            text-align: center;
+            margin-top: 10px;
+           
+            h1{
+                font-size: 16px;
+                font-weight: 400;
+                margin-left: 5px;
+                display: block;
+
+            }
+            img{
+                width: 20px;
+                height: 18px;
+            }
+        }
+        p{
+            color: black;
+            margin-top: 10px;
+        }
+    }
+}

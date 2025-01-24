@@ -1,5 +1,3 @@
-
-
 {% extends 'layout.html' %}
 {% load static %}
 
@@ -10,38 +8,26 @@
       <div class="leftbar container">
          <ul style="list-style: none;">
           
-          {% for service in services  %}
-            
-          <li>
-            <a href="#" style="background-color: #C6D7FA;">{{service.title }} {{ services.id }}</a>
-          </li>
+          {% for service in all_services %}
+            <li>
+              <a href="{% url 'info:service_view' pk=service.id %}" style="background-color: #C6D7FA;">{{service.title }} {{ service.id }}</a>
+            </li>
           {% endfor %}
-            
+            {{ get_last_service_id }}
          
          </ul>
       </div>
-      <div class="rightbar">
-
-        
-        {% for service in  services %}
-          
-        <h5 class="">{{service.title}}</h5>
-        <img src="{{service.image.url}}" alt="">
-        <h4>{{service.description}}</h4>
+      <div class="rightbar">  
+        <h5 class="">{{ detail.title }}</h5>
+        <img src="{{ detail.image.url }}" alt="">
+        <h4>{{ detail.description }}</h4>
         <h1>Praktiki Tədris proqramı:</h1>
+        
         <ol>
-          
-          {% for service in services %}
-            
-          <li> {{service.plan}}</li>
-          {% endfor %}
-            
-       
+          <li>{{ detail.plan }}</li>
         </ol>
-        <h3>{{service.about}}
-         </h3>
-        {% endfor %}
-          
+        
+        <h3>{{ detail.about }}</h3>
       </div>
   </section>
 

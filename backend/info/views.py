@@ -11,3 +11,4 @@ def service(request, pk):
         "detail": detail,
     }
     return render(request, "service.html", ctx)
+
